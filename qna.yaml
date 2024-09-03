@@ -99,7 +99,7 @@ seed_examples:
 document_outline: |
   Information about RHEL AI including Overview, Installation, Customization and CLI commands for ilab. 
 document:
-    repo: https://github.com/ravipatil33/rhelai/
-    commit:
+    repo: https://github.com/ravipatil33/rhelai
+    commit: 69085a5
     patterns:
-      - 
+      - sampledata.md
