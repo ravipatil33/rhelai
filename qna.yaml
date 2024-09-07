@@ -3,103 +3,124 @@ created_by: ravipatil33
 domain: science
 seed_examples:
   - context: |
-      RHEL AI performs ability to end user to customize base LLMs from Granite family and with synthesized data, fine-tune LLM model with domain specific knowledge. It is based on InstructLab which is open source project. Red Hat Enterprise Linux AI is a platform that allows you to develop enterprise applications on open source Large Language Models (LLMs). RHEL AI is built from the Red Hat InstructLab open source project. Red Hat Enterprise Linux AI allows you to do the following: Host an LLM and interact with the open source Granite family of Large Language Models (LLMs). Using the LAB method, create and add your own knowledge data in a git repository and fine-tune a model with that data with minimal machine learning background.
-      Interact with the model that has been fine-tuned with your data. Red Hat Enterprise Linux AI empowers you to contribute directly to LLMs. This allows you to easily and efficiently build AI-based applications, including chatbots. RHEL AI includes, RHEL Image mode, Knowledge and Skills, SDG, DeepSpeed for training and vLLM for inference and serving new models. 
+      RHEL AI provides ability to end user to customize base LLMs with synthesized data, fine-tune LLM model.
     questions_and_answers:
       - question: |
           What is RHEL AI?
-        answer: | 
-          Red Hat Enterprise Linux AI is a platform that allows you to develop enterprise applications on open source Large Language Models (LLMs). Red Hat Enterprise Linux AI empowers you to contribute directly to LLMs.
-          This allows you to easily and efficiently build AI-based applications, including chatbots.
+        answer: |
+          RHEL AI empowers to contribute directly to LLMs. Build AI-based applications e.g. chatbots.
       - question: |
           What does Red Hat Enterprise Linux AI allows you to perform ?
         answer: |
-          Red Hat Enterprise Linux AI allows you to do the following: Host an LLM and interact with the open source Granite family of Large Language Models (LLMs), Using the LAB method, create and add your own knowledge data in a git repository and fine-tune a model with that data with minimal machine learning background and Interact with the model that has been fine-tuned with your data.
+          Host an LLM and interact with LLMs, add your own knowledge  and fine-tune a model.
       - question: |
           What are components of RHEL AI ?
         answer: |
-          RHEL AI includes : bootc (RHEL Image Mode), taxonomy (allows to add Knowledge and Skill), Synthetic Data Generation (Generates several QnA based on few provided samples), DeepSpeed (Multi-phase Training), VLLM(Inference and Serve Model)
+          RHEL AI includes: bootc(Image Mode), taxonomy(Knowledge), SDG(data), DeepSpeed(Training), VLLM(Serve Model).
       - question: |
           What are most common pythong libraries used for Deep Learning in RHEL AI ?
-        answer: |  
-          PyTorch, DeepSpeed, Tensor are few of the most common python libraries for deep learning. 
-      - question:  |
+        answer: |
+          PyTorch, DeepSpeed, Tensor are few of the most common python libraries for deep learning.
+      - question: |
           How are InstructLab and RHELAI related ?
         answer: |
-          InstructLab is an open source AI project that facilitates contributions to Large Language Models (LLMs). RHEL AI takes the foundation of the InstructLab project and builds an enterpise platform for LLM integration on applications. Red Hat Enterprise Linux AI targets high performing server platforms with dedicated Graphic Processing Units (GPUs). InstructLab is intended for small scale platforms, including laptops and personal computers.
+          RHEL AI takes InstructLab and builds an enterpise platform to integrate LLM in applications.
   - context: |
-      InstructLab implements the LAB (Large-scale Alignment for chatBots) technique, a novel synthetic data-based fine-tuning method for LLMs. The LAB process consists of several components: A taxonomy-guided sythetic data generation process, A multi-phase training process and A fine-tuning framework.
+      LAB - synthetic data-based fine-tuning method for LLMs. A taxonomy-guided, multi-phase training and fine-tuning.
     questions_and_answers:
       - question: |
           What is LAB ?
-        answer: | 
-          LAB stands for Large-scale Alignment for chatBots, its a technique in which synthentic data is used to find-tune base model. 
+        answer: |
+          LAB stands for Large-scale Alignment for chatBots, synthentic data is used to fine-tune model.
       - question: |
           What is difference between InstructLab and RHEL AI ?
         answer: |
-          Red Hat Enterprise Linux AI targets high performing server platforms with dedicated GPUs. However InstructLab is intended for small scale platforms, including laptops and personal computers.
+          RHEL AI targets servers with dedicated GPUs. InstructLab targets laptops and PCs.
       - question: |
           What does RHEL AI and InstructLab allows end customer ?
         answer: |
-          RHEL AI and InstructLab allow you to customize an LLM with domain-specific knowledge for your distinct use cases.
+          RHEL AI and InstructLab allow customizing LLM with domain-specific knowledge for different use cases.
       - question: |
           What should I run in enterprise systems for deploy AI or LLMs in application ?
         answer: |
-          RHEL AI allows you to customize an LLM with domain-specific knowledge for your distinct use cases and can be intergrated with enterprise applications. 
+          RHEL AI tools including bootc, vllm, deepspeed and instructlab.
       - question: |
           Can I train model on Laptop ?
         answer: |
-          InstructLab is open source project which enables users to contribute, modify, fine-tune and train LLM models on Laptop.
+          InstructLab enables users to contribute, modify, fine-tune and train LLM models on Laptop.
   - context: |
-      The Red Hat Enterprise Linux AI bootable image contains InstructLab and its tooling. InstructLab uses a novel approach to LLM fine-tuning called the LAB (Large-Scale Alignment for ChatBots) process. The LAB method uses a taxonomy-based system that implements high-quality synthetic data generation (SDG) and multi-phase training. Using the RHEL AI command line interface (CLI), which is built from the InstructLab CLI, you can create your own custom LLM by training and generating synthetic data on the base model with your own domain-specific knowledge.
+      The Red Hat Enterprise Linux AI bootable image contains InstructLab and its tooling.
     questions_and_answers:
       - question: |
           What is LAB ?
-        answer: | 
-          LAB stands for Large-scale Alignment for chatBots, its a technique in which synthentic data is used to find-tune base model. 
+        answer: |
+          LAB stands for Large-scale Alignment for chatBots, synthesized data is used to fine-tune base model.
       - question: |
           What are steps to customize LLMs using RHEL AI ?
         answer: |
-          Installing and initalizing RHEL AI on your preferred platform. Using a CLI and git workflow for adding skills and knowledge to your taxonomy tree. Running synthetic data generation (SDG) that uses the Mixtral-8x-7B-instruct judge model. The model can generate hundreds to thousands of synthetic question and answer sets based on the samples. Using the InstructLab with DeepSpeed for multi-phase training the base model. The prometheus-8x7b-v2-0 teacher model evaluates the data sets for accuracy and quality and creates a new model with the your curated information. Using InstructLab with vLLM for inferencing and serving the new custom model.
+          Install, add knowledge, generate data, train model, evaluate model.
       - question: |
           What is the judge model used for running synthetic data generation (SDG) ?
         answer: |
-          Synthetic Data Generation (SDG) uses the Mixtral-8x-7B-instruct judge model. The model can generate hundreds to thousands of synthetic question and answer sets based on the samples.
+          The Mixtral-8x-7B-instruct judge model generates synthetic question and answer.
       - question: |
           How does RHEL AI trains the LLM Model ?
         answer: |
-          Using the InstructLab with DeepSpeed for multi-phase training the base model. The prometheus-8x7b-v2-0 teacher model evaluates the data sets for accuracy and quality and creates a new model with the your curated information. 
+          Using the InstructLab with DeepSpeed for multi-phase training the base model.
       - question: |
           What is the teacher model ?
         answer: |
-          The prometheus-8x7b-v2-0 teacher model evaluates the data sets for accuracy and quality and creates a new model with the your curated information.
+          The prometheus-8x7b-v2-0 teacher model evaluates the data sets for accuracy.
   - context: |
-      Hardware requirements for end-to-end workflow of Granite models includes GPUs, Aggregate GPU memory and disk storage. The following charts show the hardware requirements for running the full InstructLab end-to-end workflow to customize the Graite student model. This includes, synthetic data generateion (SDG), training and evaluating a custom Granite model.
-      questions_and_answers:
+      Hardware requirements to train Granite models includes GPUs, Aggregate GPU memory and disk storage.
+    questions_and_answers:
       - question: |
           What is GPUs ?
-        answer: | 
-          GPU stands for Graphical Processing Unit, handle graphics-related work like graphics, effects, and videos. With ML and DL, it helps to perform fast parallel calculations
+        answer: |
+          GPU stands for Graphical Processing Unit, with ML and DL, it helps to perform fast parallel calculations.
       - question: |
           Who manufactures the GPUs ?
         answer: |
-          NVIDIA is major player in GPUs followed by AMD. The most popular models are L40, L40S, A100 and H100. 
+          NVIDIA is major player in GPUs followed by AMD. The most popular models are L40, L40S, A100 and H100.
       - question: |
           What is the best  GPU by NVIDIA for RHEL AI or LLM training ?
         answer: |
-          NVIDIA H100 in counts of 2, 4 or 8 with aggregated memory and 1 TB of disk space are good for end-to-end workflow of Granite models, training and tuning and serving. 
+          NVIDIA H100 in counts of 2, 4 or 8 with aggregated memory and 1 TB of disk.
       - question: |
           What is A100, H100, L40S and L40 ?
         answer: |
-          These are popular GPU models from NVIDIA. 
+          These are popular GPU models from NVIDIA.
       - question: |
           What does 160GB, 320GB and 640GB means ?
         answer: |
-          The values in GB here in multiplicatino of 160 are representing Aggregate GPU memory for the respective GPU family. 
+          The values in GB here in multiplication of 160 are representing Aggregate GPU memory.
+  - context: |
+      Hardware requirements to infere and serve is lower like L40S, L40 with 80 GB disk.
+    questions_and_answers:
+      - question: |
+          What GPUs are okay for serving the model ?
+        answer: |
+          NVIDIA L40S with 48GB RAM or NVIDIA L40 with 24GB memory is fine to serve model.
+      - question: |
+          What all components RHEL AI includes ?
+        answer: |
+          Granite foundation model, InstructLab, bootc, vLLM, deepspeed and PyTorch.
+      - question: |
+          Is it recommended to run RHEL AI on laptop ?
+        answer: |
+          No, as RHEL AI requires high resources, it should be run on enterprise server.
+      - question: |
+          Can InstructLab be deployed on Laptop or PC ?
+        answer: |
+          Yes
+      - question: |
+          Is InstructLab open source ?
+        answer: |
+          Yes
 document_outline: |
-  Information about RHEL AI including Overview, Installation, Customization and CLI commands for ilab. 
+  Information about RHEL AI including Overview, Installation, Customization and CLI commands for ilab.
 document:
-    repo: https://github.com/ravipatil33/rhelai
-    commit: 69085a5
-    patterns:
-      - sampledata.md
+  repo: https://github.com/ravipatil33/rhelai/
+  commit: 69085a5
+  patterns:
+    - sampledata.md
